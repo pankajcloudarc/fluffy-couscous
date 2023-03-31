@@ -1,0 +1,99 @@
+ec2 –user
+sudo su
+yum install git –y
+which git
+git - -version
+git config - -global user.name “pankaj sharma”
+git config - -global user.email “pankaj@123”
+git config –list
+mkdir pankaj                        (making directory or folder)
+cd pankaj                              (making file )
+git init                                    (making directory into a local repo)
+ls –a                                        (just to check local repo is made or  not)
+cat  >pankaj1
+Hi I am a good boy 
+Ctrl+d
+git add .
+git status
+git commit –m “my first code”
+git log      or    git log -1   (for latest commit)	or   git log --oneline 	(to show all commit in one line)
+git show (commit id)
+git remote add origin  https://github.com/pankajcloudarc/fluffy-couscous.git                   (git hub repo connect)
+git push --set-upstream origin master
+Username: pankajcloudarc
+
+git pull –u origin main
+trick to push ((Need to login github >> Settings >> Developer settings >> Personal Access Tokens >> Generate new token >> Give the name for the token and select the repo in the scope.... After the token is generated copy the code in the notepad.))
+
+vi .gitignore
+i
+* .css
+* .java
+:wq!  Or shift+ZZ
+
+git add .gitignore
+git commit –m “ignore file format”
+git status
+touch filepankaj.css pankaj.java deepa.xml reena.yml
+ls
+git status
+git add .
+git commit –m “my commented file”
+git log -1   (for latest commit)      or   git log --oneline 	(to show all commit in one line)
+
+git branch                                                (to see list of available branch)
+git branch xyz                                        (to create new branch)
+git checkout xyz                                    ( to switch branch)
+git branch –d xyz      	                 (to delete xyz branch)
+git merge xyx                                           (xyx any branch name)
+
+If I want to merge master branch code in branch xyz then code will be like :
+git branch 
+branch xyz
+*master
+git merge branchxyz
+git conflict occurs when same name file made by you in different branch then conflict occurs
+If conflict occurs while merging master branch file1 to branch xyz file1 then code will be like:
+vi file1
+then do a little changes in it
+esc+shift+ZZ or esc+shift:wq
+git add .
+git commit –m
+git push origin master
+
+git stash
+git stash list					                                    (to see stash list)
+git stash apply stash@{n number}
+git stash clear      							(to clear stash items)
+
+when you want to undo file from staging area
+git reset (filename)
+git reset .
+when you want to delete file from both staging and workspace area
+git reset - -hard
+
+git reset – before commit			(git reset command undo file from staging area to workspace)
+git revert – after commit			(git revert command helps you undo an existing commit)
+git revert <wrong commit id by using git log command>
+i
+(Type message manually please ignore previous commit)
+
+How to remove untracked file
+git clean –n  (dry run)
+git clean –f (forcefully)
+
+            Tagging
+git tag –a <tag name> –m “xyz” <commit id>
+git tag   						(to see the list of the tag)
+git show <tag name>  				(to see particular commit content by using tag)
+git tag –d <tag name>				(to delete a tag)
+git  clone – git clone (url of the git hub repo)
+Diffrence between git clone and git add
+
+Git clone: It creates a local repo automatically in linux machine with the same name as in git hub.
+Git add: In git add we need to make a local repo from our end only.
+
+For files , we can use rm -f "filename"
+For directory ,we can use rm -rf "dirname"
+
+
